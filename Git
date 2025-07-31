@@ -1,0 +1,151 @@
+Git Operations
+~~~~~~~~~~~~~~
+
+note: (this are not a command is just an reference)
+cmd -> command prompt
+sys -> your system (laptop)
+web -> website (use browser)
+
+Initial Git Push (using default branch)
+----------------------
+	1. sys -> create one empty folder in your system
+
+	2. cmd -> git init (note: you need initialize your git folder and repo)
+
+	3. cmd -> git add .
+		
+		* "." means it uploads all file and folder in that current directory or folder
+
+	4. cmd -> git commit -m "your commit message here" (note: this is optional)
+
+	5. web -> open github.com (note: already have an account login or create if dont have an account), then create one new repository
+
+	6. cmd -> git remote add origin <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+								(Or)
+		  git remote set-url origin <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+
+	7. cmd -> git push -u orgin <branch-name> (eg: <branch-name> = master, master is default branch)
+
+
+Initial Git Push (using custom branch)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	1. sys -> create one empty folder in your system
+
+	2. cmd -> git init (note: you need initialize your git folder and repo)
+
+	3. cmd -> git add . (note: "." means it uploads all file and folder in that current directory or folder)
+
+	4. cmd -> git commit -m "your commit message here" (note: this is optional)
+
+	5. cmd -> git checkout -b <branch-name> (eg: <branch-name> = mybranch)
+		
+		*  Branch exists switched to that branch or not exists created and then switched to a new one
+
+	6. web -> open github.com (note: already have an account login or create if dont have an account), then create one new repository
+
+	7. cmd -> git remote add origin <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+								(Or)
+		  git remote set-url origin <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+
+	8. cmd -> git push -u orgin <branch-name> (eg: <branch-name> = mybranch)
+
+Create new Branch in existing Repo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	1. cmd -> git add . (note: "." means it uploads all file and folder in that current directory or folder)
+	
+	2. cmd -> git commit -m "your commit message here" (note: this is optional)
+
+	3. cmd -> git checkout -b <branch-name> (eg: <branch-name> = mybranch)
+
+	4. cmd -> git push -u origin <branch-name> (eg: <branch-name> = mybranch)
+
+Create new Branch in existing Repo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+	1. cmd -> git add . (note: "." means it uploads all file and folder in that current directory or folder)
+	
+	2. cmd -> git commit -m "your commit message here" (note: this is optional, or it will take last commit message or default message set by git)
+
+	3. cmd -> git checkout -b <branch-name> (eg: <branch-name> = mybranch)
+
+	4. cmd -> git push -u origin <branch-name> (eg: <branch-name> = mybranch)
+
+Pull Repo
+~~~~~~~~~~
+	1. sys -> use existing folder or create one new folder
+
+	2. cmd -> git init
+	
+	3. cmd -> git remote add origin <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+
+	4. cmd -> git pull origin <branch-name> (note: existing branch name in that repository)
+
+Clone Repo
+~~~~~~~~~~
+	1. sys -> select your path. Where you want to clone that repo
+	
+	2. cmd -> git clone <git-repo-url> (eg: <git-repo-url> = https://github.com/your_username/your_repo_name.git)
+
+Rename Branch
+~~~~~~~~~~~~~~
+	* Rename the current branch
+
+		1. cmd -> git branch -m <new-branch-name> (eg: <new-branch-name> = yournewbranchname)
+		
+		2. cmd -> git push origin <new-branch-name> (eg: <new-branch-name> = yournewbranchname)
+		
+		3. (optional) cmd -> git push origin --delete <old-branch-name> (eg: <old-branch-name> = youroldbranchname)
+
+	* Rename other branch when your in another branch
+
+		1. cmd -> git branch -M <old-branch-name> <new-branch-name> (eg: <old-branch-name> = yourexistingbranchname <new-branch-name> = yournewbranchname)
+		
+		2. cmd -> git push origin <new-branch-name> (eg: <new-branch-name> = yournewbranchname)
+
+		3. (optional) cmd -> git push origin --delete <old-branch-name> (eg: <old-branch-name> = youroldbranchname)
+
+Delete Branch
+~~~~~~~~~~~~~
+	1. cmd -> git push origin --delete <branch-name> (eg: <branch-name> = yourbranchname)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

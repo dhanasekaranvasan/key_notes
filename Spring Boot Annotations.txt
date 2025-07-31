@@ -1,0 +1,44 @@
+Spring Boot Annotations:
+~~~~~~~~~~~~~~~~~~~~~~~~
+@SpringBootApplication - Default Imports all the Annotation Injections.
+	No @SpringBootApplication: Beans and Components are imported explicitly(@Import)
+	@SpringBootConfiguration/@Configuration
+	@EnableAutoConfiguration
+	@Import({AppConfig.class, StudentConfig.class})
+@ComponentScans - Add multiple @ComponentScan to this (@ComponentScan({APIConfig.class}), @ComponentScan({StudentCofig.class}))
+@ComponentScan - Handle the Configuration Class
+@Component - Single component with default initialized object class managed by spring boot.
+@Configuration - Manage the Object initialization and injections.
+
+Injectors
+~~~~~~~~~~~~~~
+@Autowired
+@Bean
+@Qualifier
+@Primary
+
+REST API's
+~~~~~~~~~~
+@RestController/@Controller - Web REST API builder (Handle Request and Response). Used for REST template with UI (ThymeLeaf).
+@Service - Handle the REST logic by the request from controllers
+@Repository - Connect and fetch the data from database and send to service.
+@RestControllerAdvice - Handle the rest controller response and request messages
+REST Action Annotations
+~~~~~~~~~~~~~~~~~~~~~~~
+@RequestMapping
+@GetMapping
+@PostMapping
+@PutMapping
+@DeleteMapping
+@RequestBody
+@ResponseBody
+@PathVariable
+@Param
+
+Others
+~~~~~~~~
+@Profile - Profile Production or Development
+@ExceptionHandler
+@EnableAsync
+(---@EnableConfigurationProperties({}) or @ConfigurationPropertiesScan(name = "package name here") , @ConfigurationProperties, @Validated, @Valid - not for larger project, @NotNull, @Min, @Max--)
+@Transactional - DB level interaction if actions or method fails the action not happen

@@ -1,0 +1,11 @@
+Application Properties
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+spring.application.name=AppName - Application Name Given
+spring.main.log-startup-info=true/false - Controls the Startup information logging
+spring.main.lazy-initialization=false/true - Lazily load the application by scenario (Use @Lazy(false) for specific bean always active)
+server.port=8080 - Custom Port number
+spring.banner.location=classpath:/pathlocation
+spring.banner.image.location=classpath:/pathlocation
+debug=false/true
+spring.profiles.active=dev,prod
+spring.profiles.default=none

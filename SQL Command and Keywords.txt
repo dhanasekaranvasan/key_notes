@@ -1,0 +1,40 @@
+SQL Command and Keywords
+~~~~~~~~~~~~~~~~~~~~~~~~
+CREATE: used to create database or table
+	* CREATE DATABASE database_name;
+	* CREATE TABLE table_name(column datatype, column datatype, .....);
+
+USE: Assign database to current session or set as default database
+	* USE database_name;
+
+SHOW: Show all the database or tables(current database)
+	* SHOW TABLES;
+	* SHOW DATABASES;
+
+
+ALTER: Alter the table or database settings
+	* ALTER DATABASE database_name ...commands here;
+	* ALTER TABLE table_name ADD COLUMN column_name datatype, .....;
+	* ALTER TABLE table_name RENAME TO new_table_name .....;
+	* ALTER TABLE table_name RENAME COLUMN column_name TO new_column_name .....;
+	* ALTER TABLE table_name CHANGE COLUMN column_name new_column_name datatype .....;
+
+RENAME: Rename the table name
+	* RENAME TABLE table_name TO new_table_name;
+	* RENAME TABLE table_name1 TO new_table_name1, table_name2 TO new_table_name2;
+
+DROP: Drop or Delete database or table
+	* DROP DATABASE database_name;
+	* DROP TABLE students;
+
+TRUNCATE: Drop or Delete all the rows from table
+	* TRUNCATE TABLE table_name;
+
+CHECK: Check table for errors
+	* CHECK TABLE table_name;
+
+OPTIMIZE: Remove unused space and defragment the table
+	* OPTIMIZE TABLE table_name;
+
+ANALYZE: Table statistics(settings and comments) to help the query optimizer
+	* ANALYZE TABLE table_name;

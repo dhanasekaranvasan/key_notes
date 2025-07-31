@@ -1,0 +1,94 @@
+Question - 1: What are the features of Java8?
+	* It includes various updates to java programming, JVM tools, libraries and etc..,
+	* Java8 Features:
+		1. static and default methods in interface.
+		2. @FuncationalInterface (SAM - Single Abstract or Interface Method)
+		3. Lambda Expression (->)
+		4. Method Reference
+		5. Optional Class
+		6. StreamAPI
+		7. forEach()
+
+Question - 2: What are an interface?
+	* It is a blueprint for an object class
+	* It only contains unimplemented methods
+	* We can't create an object for interface
+	* It contains only unimplemented methods, if we implement the unimplemented methods in another class using "implements" keyword
+
+Question - 3: Can we have implemented methods in an interface? If yes how?
+	* Yes, we can create a implemented methods by using "static" and "default" keywords
+
+Question - 4: Explain Static keyword in interface?
+	* Used to create multiple implemented methods
+	* We can't modify or override the implemented methods in an interface
+	* Using the static implemented methods in another class by Calling interface name (Syntax: InterfaceName.methodName())
+
+Question - 5: What is static block?
+	* Inside the class we create a instance block with static keyword known as static block
+	* It using the static memory to and fetch the data
+
+Question - 6: What is final, finally and finalize?
+	Final: Using final keyword value initialized we can't change or modify the value
+	Finally: It is used in exception handle, whether an exception handled or not the finally class is executed
+	Finalize: It is called before the object is destroyed and used to perform cleanup
+
+Question - 7: Difference between final and static keyword?
+	Final: Once the value or method initialized we can't override it
+	Static: It is an instance of the class and we call the static variable or method without create an object (ClassName.staticMethod() or ClassName.variableName)
+
+Question - 8: Explain default keyword in an interface?
+	* Used to create a implemented method with default keyword
+	* We can modify the implemented method in another class
+
+Question - 9: What is functional interface?
+	* @FuncationalInterface is an annotation used to create one unimplemented method in interface
+	* Only one unimplemented method allowed to create in interface
+	* We can create 'n' numbers of implemented methods inside the functional interface by using "static" and "default" keywords
+
+Question - 10: Can we put more than one abstract method in the functional interface?
+	* No, we an create only one abstract method in functional interface
+	* Using "static" and "default" keywords to create more implemented methods in functional interface
+
+Question - 11: What are the type of functional interface?
+	* Implements keywords
+	* Method reference
+	* Lambda expression
+
+Question - 12: Difference between interface and functional interface?
+	Interface:
+		* It is a blueprint of an object class
+		* Used to create multiple unimplemented methods
+		* "static" and "default" keywords used to create a 'n' numbers of implemented methods
+	FunctionalInterface:
+		* It is an annotation (@FuncationalInterface)
+		* Allowed and must to create only one unimplemented method
+		* "static" and "default" keywords used to create a 'n' numbers of implemented methods
+
+Question - 13: How many ways to implement a functional interface and explain that?
+	Implements: (Children c = (name) -> new Parent(name).getName())
+	Method reference: (Vehicle c = CubBank::rateOfInterest)
+	Lambda expression: (Bank b = (a, b) -> a + b;)
+
+Question - 14: What is method reference?
+	* It is a shorthand for lambda expression
+	* Used to refer the mothods to one funcational interface by using (::) symbol
+
+Question - 15: Which is more efficient methods reference or lambda expression? Explain?
+	* Lambda expression is efficient way to do the operations
+
+Question - 16: Explain Optional Class?
+	* It is the value only return the not-null value.
+	* It throws the NullPointerException when the value is "null"
+	* Avoid this by using the of(), ofNullable(), isPresent(), empty(), isEmpty(), orElse() and etc..,
+
+Question - 17: What is Scanner class and explain the methods?
+	* It a pre defined class used to get the input value from the user
+	* We can get the input value by using the predefined methods next(), nextLine(), nextInt(), nextFloat(), nextDouble() and etc..,
+
+Question - 18: What is forEach()?
+	* It is used to iterate the collections of list.
+	* Using lambda and method reference expression to iterate the list
+
+Question - 19: What is StreamAPI?
+	* StreamAPI is one the most widely using feature in java
+	* It used to do more complex operations with pre defined methods like filter(), map(), max(), min(), count(), collect() and etc..,

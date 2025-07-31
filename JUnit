@@ -1,0 +1,67 @@
+JUnit Testing Library
+~~~~~~~~~~~~~~~~~~~~~
+JUnit is a Java framework for writing and running automated tests. It's primarily used to test individual units of code, like methods or classes.
+
+Annotations
+~~~~~~~~~~~
+@BeforeAll -> This annotation is used on a static method that runs once before all the test methods in the test class
+
+@AfterAll -> This annotation is used on a static method that runs once after all the test methods in the test class
+
+@BeforeEach -> This annotation is used on methods that should run before each test method in the current test class
+
+@AfterEach -> This annotation is used on methods that should run after each test method in the current test clas
+
+@Test -> Marks a method as a test method.
+
+@ParameterizedTest -> Marks a test method as a parameterized test, which allows you to run the same test with different parameters.
+
+@Disabled -> This annotation disables a test or a test class.
+
+@Timeout -> This annotation specifies a time limit for a test method.
+
+@CsvSource -> Supplies values to parameterized tests from a comma-separated list.
+
+@MethodSource -> Provides a method that generates the arguments for a parameterized test.
+
+@EnumSource -> Supplies enum constants to a parameterized test.
+
+@TestInstance -> Configures the lifecycle of test instances.
+
+@DisplayName -> Used to define a custom display name for test methods or test classes.
+
+@Tag -> Allows grouping tests into categories or tags.
+
+@Test(expected = ExceptionName.class) -> Annotation is used to define expected exceptions
+
+BuildInMethods
+~~~~~~~~~~~~~~
+assertEquals() ->
+
+assertNotEquals() ->
+
+assertNull() ->
+
+assertNotNull() ->
+
+assertSame() ->
+
+assertNotSame() -> 
+
+assertTrue() ->
+
+assertFalse() ->
+
+assertArrayEquals() ->
+
+fail() -> 
+
+assertThrows() ->
+
+assertDoesNotThrow() ->
+
+assertAll() -> grouping multiple assertions into one test case
+
+assertIterableEquals() ->
+
+assertEqualsIgnoringCase() -> Asserts that two strings are equal, ignoring case.
