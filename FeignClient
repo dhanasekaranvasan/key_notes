@@ -1,0 +1,37 @@
+Feign Client
+~~~~~~~~~~~~
+Declarative REST client handler.
+
+@EnableFeignClients -> Server or ApiGateway
+@FeignClient -> Register Single Service 
+	@FeignClient(
+		contextId = "<contextid>" --> unique service name with different context id
+		name = "<service-name>", --> "<service-name>" = "student-service"
+		url = "<service-url>", --> "<service-url>" = "http//localhost:8081"
+		configuration = <ConfigurationClassName>.class, --> <ConfigurationClassName>.class = FeignConfig.class, StudentConfig.class
+		fallback = <FallbackClassName>.class, --> <FallbackClassName>.class = FeignFallback.class, OrderFallback.class
+		fallbackFactory = <FallbackFactoryClassName>.class --> <FallbackFactoryClassName>.class = FeignFallbackFactory.class, InventoryFallbackFactory.class
+	)
+
+Additional Features:
+--------------------
+1. RequestInterceptor	--> Set request setup before every new request
+2. ErrorDecoder		--> Decode Response Error
+3. Logger		--> Logger to show the logging details (Default using SLF4J)
+4. Decoder and Encoder	--> Decoder to decode the request and Encoder to encode the reponse
+5. Circuit Breacker	--> Circuit breaker (Must need be to Enable)
+6. Loadbalancer		--> Multi Request request and response balancing
+7. Fallback		--> Static fallback response
+6. FallbackFactory	--> Static and dynamic response
+
+Fallback (Must enable the circuit breaker (openfeign or resilience4j))
+--------
+public StudentFallback implements StudentClient {
+	//import all unimplemented method
+}
+
+FallbackFactory (Must enable the circuit breaker (openfeign or resilience4j))
+--------
+public StudentFallback implements FallbackFactory<StudentClient> {
+	//import all unimplemented method
+}

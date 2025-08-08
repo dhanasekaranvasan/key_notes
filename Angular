@@ -1,0 +1,16 @@
+Angular - Front end framework
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Angular is a powerful front-end framework developed by Google for building dynamic, modern web applications.
+
+Installation and New Project
+----------------------------
+cmd -> npm install -g @angular/cli (global system installation)
+cmd -> ng --version (check the current version of angular)
+sys -> locate the project path
+cmd -> ng new <project-name>
+cmd -> cd <project-name>
+cmd -> ng serve --open (run application)
+
+Commands (note: inside project folder) 
+---------
+cmd -> ng generate component <component-name>
